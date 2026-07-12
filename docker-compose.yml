@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    image: soccerboard:latest
+    ports:
+      - "5153:5153"
+    restart: unless-stopped
