@@ -72,6 +72,21 @@ const assistsChartSetting = {
   margin: { left: 50 },
 }
 
+const passesChartSetting = {
+  xAxis: [
+    {
+      label: 'Number of Passes',
+    },
+  ],
+  height: 400,
+  sx: {
+      ['.${axisClasses.left} .${axisClasses.label}']: {
+        transform: "translate(20px, 0)",
+      },
+  },
+  margin: { left: 50 },
+}
+
 const matchesChartSetting = {
     xAxis: [
     {
@@ -179,7 +194,7 @@ const BarChartPrint = (data, text) => {
                 }]}
                 series={[{ dataKey: 'passes', label: 'Passes by other ' +  data["position"] + ' Players', valueFormatter, color: '#78056b'  }]}
                 layout="horizontal"
-                {...assistsChartSetting}
+                {...passesChartSetting}
                 />)
     } else if (text == "matches") {
         return (<BarChart
