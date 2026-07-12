@@ -16,9 +16,9 @@ export function useGetPlayerDetail<T>(id: string): FetchState<T> {
         setPlayers({ data: null, loading: true, error: null });
         try {
           // Simulate an API call
-          const response = await axios.get<player[]>(`http://127.0.0.1:8000/v1/players/${id}`);
+          const response = await axios.get<player[]>(`http://127.0.0.1:8001/v1/players/${id}`);
           const resp: Array<player> = response.data;
-          console.log("fetched player --- ", resp);
+          // console.log("fetched player --- ", resp);
           setPlayers({ data: resp, loading: false, error: null });
           // setFetchState(FetchState.SUCCESS);
         } catch (err) {

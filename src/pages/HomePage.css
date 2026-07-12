@@ -19,12 +19,77 @@
     margin-left: 20px;
 }
 .player-options {
-    
     width: 100%;
+    display: flex;
+    align-items: center; /* vertically align select and button */
+    gap: 12px;
 }
+.player-options .MuiInputLabel-root {
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
 .position-select {
     width: 100%;
+    max-width: 360px;
 }
+
+.position-select .MuiSelect-select {
+    padding: 14px 44px 14px 16px; /* spacing for label + icon */
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #d6e9fb;
+    box-shadow: 0 2px 6px rgba(16,24,40,0.04);
+    transition: box-shadow 0.18s ease, border-color 0.15s ease, transform 0.08s ease;
+    color: #0f172a;
+    min-height: 48px;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Position the select icon (MUI) cleanly on the right */
+.position-select .MuiSelect-icon {
+    right: 12px;
+    color: #6b7280;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.position-select.Mui-focused .MuiSelect-select,
+.position-select.Mui-focused {
+    border-color: #1976d2;
+    box-shadow: 0 8px 22px rgba(25,118,210,0.12);
+}
+
+.position-select .MuiSelect-select:hover {
+    border-color: #bfe6ff;
+}
+
+.search-button {
+    min-height: 44px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #1976d2;
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(25,118,210,0.12);
+    text-transform: none;
+    transition: box-shadow 0.15s ease, transform 0.12s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-button:hover {
+    box-shadow: 0 8px 22px rgba(25,118,210,0.16);
+    transform: translateY(-1px);
+}
+.search-button:active {
+    transform: translateY(0);
+}
+
 .player-options-paper{
     margin-top: 60px;
     margin-left: 10%;

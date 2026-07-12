@@ -246,7 +246,7 @@ export function PlayerDetailComponent({ title, description }: PlayerDataComponen
                         <Grid size={{ xs: 8 }}><h2>{data.name}</h2></Grid>
                         <Grid size={{ xs: 4 }}><h2 className='score-header'>Score</h2></Grid>
                     </Grid>  
-                    <Grid container wrap="nowrap" size={12} className="player-options">   
+                    <Grid container wrap="nowrap" size={12}>   
                         <Grid size={{ xs: 9 }}>{data.position}</Grid>
                         <Grid size={{ xs: 3 }}>
                             <Gauge
@@ -265,7 +265,7 @@ export function PlayerDetailComponent({ title, description }: PlayerDataComponen
                             />
                         </Grid>
                     </Grid>
-                    <Grid container wrap="nowrap" size={12} className="player-options">
+                    <Grid container wrap="nowrap" size={12}>
                         <Grid size={{ xs: 5 }}>
                             <TableContainer component={Paper}>
                                 <Table 

@@ -6,17 +6,20 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IconButton } from '@mui/material';
 import { useGetPlayers } from '../hooks/playerHooks';
 // import { FetchState } from '../utils/types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { player } from '@utils/types';
+import { PlayerData } from '@pages/HomePage';
 
 interface PlayerDataComponentProps {
   title: string;
   description: string;
+  data: [PlayerData] | null;
+  loading: false,
+  error: false
 }
-
-export function PlayerDataComponent({ title, description }: PlayerDataComponentProps) {
-
-    const {data, loading, error} = useGetPlayers<player>();
+export const PlayerDataComponent: React.FC<PlayerDataComponentProps> = ({ data, loading, error }) => {
+    // const [data, setData] = useState(selectData);
+    // const {data, loading, error} = useGetPlayers<player>();
 
     // Initialize the navigate function
     const navigate = useNavigate();
