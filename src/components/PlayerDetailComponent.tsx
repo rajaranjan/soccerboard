@@ -316,33 +316,6 @@ export function PlayerDetailComponent({ title, description }: PlayerDataComponen
                                                 <TableCell align="left">{data.leagues}</TableCell>
                                             </TableRow>
                                             <TableRow
-                                                key="goals"
-                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                <TableCell component="th" scope="row">
-                                                   Goals
-                                                </TableCell>
-                                                <TableCell align="left">{data.goals}</TableCell>
-                                            </TableRow>
-                                            <TableRow
-                                                key="assists"
-                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                <TableCell component="th" scope="row">
-                                                   Assists
-                                                </TableCell>
-                                                <TableCell align="left">{data.assists}</TableCell>
-                                            </TableRow>
-                                            <TableRow
-                                                key="passes"
-                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                <TableCell component="th" scope="row">
-                                                   Passes
-                                                </TableCell>
-                                                <TableCell align="left">{data.passes}</TableCell>
-                                            </TableRow>
-                                            <TableRow
                                                 key="matches_own"
                                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                                 >
@@ -351,15 +324,70 @@ export function PlayerDetailComponent({ title, description }: PlayerDataComponen
                                                 </TableCell>
                                                 <TableCell align="left">{data.matches_own}</TableCell>
                                             </TableRow>
-                                            <TableRow
-                                                key="shots"
-                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                <TableCell component="th" scope="row">
-                                                   Shots
-                                                </TableCell>
-                                                <TableCell align="left">{data.shots}</TableCell>
-                                            </TableRow>
+                                            {data.position == "Goalkeeper" ? (
+                                                <React.Fragment>
+                                                    <TableRow
+                                                        key="saves"
+                                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                        >
+                                                        <TableCell component="th" scope="row">
+                                                            Saves
+                                                        </TableCell>
+                                                        <TableCell align="left">{data.saves}</TableCell>
+                                                    </TableRow>
+                                                    <TableRow
+                                                        key="saves"
+                                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                        >
+                                                        <TableCell component="th" scope="row">
+                                                            Clean Sheets
+                                                        </TableCell>
+                                                        <TableCell align="left">{data.clean_sheets}</TableCell>
+                                                    </TableRow>
+                                                </React.Fragment>
+                                            ) : (
+                                                <React.Fragment>
+                                                <TableRow
+                                                    key="goals"
+                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                    >
+                                                    <TableCell component="th" scope="row">
+                                                    Goals
+                                                    </TableCell>
+                                                    <TableCell align="left">{data.goals}</TableCell>
+                                                </TableRow>
+                                                <TableRow
+                                                    key="assists"
+                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                    >
+                                                    <TableCell component="th" scope="row">
+                                                    Assists
+                                                    </TableCell>
+                                                    <TableCell align="left">{data.assists}</TableCell>
+                                                </TableRow>
+                                                <TableRow
+                                                    key="passes"
+                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                    >
+                                                    <TableCell component="th" scope="row">
+                                                    Passes
+                                                    </TableCell>
+                                                    <TableCell align="left">{data.passes}</TableCell>
+                                                </TableRow>
+                                                <TableRow
+                                                    key="shots"
+                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                    >
+                                                    <TableCell component="th" scope="row">
+                                                    Shots
+                                                    </TableCell>
+                                                    <TableCell align="left">{data.shots}</TableCell>
+                                                </TableRow>
+                                            </React.Fragment>
+                                            )}
+                                            
+                                            
+                                            
                                     </TableBody>
                                 </Table>
                             </TableContainer>
