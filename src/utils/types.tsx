@@ -13,6 +13,8 @@ export type player = {
     assists: number;
     shots: number;
     age: number;
+    saves: number;
+    clean_sheets: number;
     leagues: string[];
     matches_own: number;  
     score: number;  

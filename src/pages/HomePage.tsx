@@ -6,19 +6,6 @@ import { PlayerDataComponent } from '@components/PlayerDataComponent';
 import { player } from '@utils/types';
 import { useGetPlayers } from '../hooks/playerHooks';
 
-export interface PlayerData {
-  id: number;
-  name: string;
-  position: string;
-  age: number;
-  goals: number;
-  passes: number;
-  assists: number;
-  shots: number;
-  matches_own: number;
-  score: number
-}
-
 const HomePage = () => {
   // const {data, loading, error} = useGetPlayers<player>();
   const [apiData, setApiData] = useState([]);

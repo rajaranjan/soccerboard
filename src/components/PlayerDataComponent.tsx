@@ -30,6 +30,8 @@ export const PlayerDataComponent: React.FC<PlayerDataComponentProps> = ({ data, 
         { field: 'shots', headerName: 'Shots', flex: 1 },
         { field: 'matches_own', headerName: 'Matches Owned', flex: 1 },
         { field: 'age', headerName: 'Age', flex: 1 },
+        { field: 'saves', headerName: 'Saves', flex: 1 },
+        { field: 'clean_sheets', headerName: 'Clean Sheets', flex: 1 },
         { field: 'score', headerName: 'Score', flex: 1 },
         {
             field: 'action',
