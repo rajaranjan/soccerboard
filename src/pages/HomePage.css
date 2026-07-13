@@ -22,12 +22,11 @@
     width: 100%;
     display: flex;
     align-items: center; /* vertically align select and button */
-    gap: 12px;
+ 
 }
 .player-options .MuiInputLabel-root {
     font-size: 13px;
     color: #374151;
-    margin-bottom: 6px;
 }
 
 .position-select {
@@ -43,9 +42,9 @@
     box-shadow: 0 2px 6px rgba(16,24,40,0.04);
     transition: box-shadow 0.18s ease, border-color 0.15s ease, transform 0.08s ease;
     color: #0f172a;
-    min-height: 48px;
+    min-height: 30px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 10px;
     display: flex;
     align-items: center;
     position: relative;
@@ -89,7 +88,9 @@
 .search-button:active {
     transform: translateY(0);
 }
-
+.search-button-section {
+    padding-top: 16px;
+}
 .player-options-paper{
     margin-top: 60px;
     margin-left: 10%;

@@ -60,9 +60,9 @@ export const PlayerFormComponent: React.FC<PlayerFormComponentProps> = ({ onSucc
                             <MenuItem value={"Goalkeeper"}>Goalkeeper</MenuItem>
                         </Select>
                     </Grid>
-                    <Grid size={{ xs: 3 }}>
+                    <Grid size={{ xs: 3 }} className="search-button-section">
                         <Button type="submit" variant="contained" className="search-button"  disabled={loading}>
-                            {loading ? 'Submitting...' : 'Submit'}
+                            {loading ? 'Submitting' : 'Submit'}
                         </Button>
                     </Grid>
                 </Grid>
