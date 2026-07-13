@@ -10,6 +10,7 @@ import { PlayerData } from '@pages/HomePage';
 import React from 'react';
 import axios from 'axios'; 
 import { player } from '../utils/types';
+import { API_URL } from '../config';
 
 interface PlayerFormComponentProps {
   title: string;
@@ -28,7 +29,7 @@ export const PlayerFormComponent: React.FC<PlayerFormComponentProps> = ({ onSucc
 
         setLoading(true);
         try {
-            const response = await axios.get<player[]>('http://127.0.0.1:8001/v1/players?position=' + selectedValue );
+            const response = await axios.get<player[]>(API_URL + 'players?position=' + selectedValue );
             const result: Array<player> = response.data;
             
             // Send the fetched data up to the parent component

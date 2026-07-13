@@ -3,7 +3,6 @@ import './HomePage.css';
 import { HeaderComponent } from '@components/HeaderComponent';
 import { PlayerFormComponent } from '@components/PlayerFormComponent';
 import { PlayerDataComponent } from '@components/PlayerDataComponent';
-
 import { player } from '@utils/types';
 import { useGetPlayers } from '../hooks/playerHooks';
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import { FetchState, player } from '../utils/types';
+import { API_URL } from '../config';
 
 export function useGetPlayers<T>(): FetchState<T> {
   // const [fetchState, setFetchState] = useState(FetchState.DEFAULT);
@@ -16,7 +17,7 @@ export function useGetPlayers<T>(): FetchState<T> {
         setPlayers({ data: null, loading: true, error: null });
         try {
           // Simulate an API call
-          const response = await axios.get<player[]>('http://127.0.0.1:8001/v1/players');
+          const response = await axios.get<player[]>(API_URL + 'players');
           const resp: Array<player> = response.data;
           // console.log("fetched players --- ", resp);
           setPlayers({ data: resp, loading: false, error: null });
