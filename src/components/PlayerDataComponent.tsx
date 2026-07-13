@@ -1,13 +1,9 @@
 import { useNavigate } from 'react-router-dom';
-import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { DataGrid } from '@mui/x-data-grid';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IconButton } from '@mui/material';
-import { useGetPlayers } from '../hooks/playerHooks';
-// import { FetchState } from '../utils/types';
 import { useEffect, useState } from 'react';
-import { player } from '@utils/types';
 import { PlayerData } from '@pages/HomePage';
 
 interface PlayerDataComponentProps {

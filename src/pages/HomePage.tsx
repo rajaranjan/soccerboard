@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './HomePage.css';
-import Paper from '@mui/material/Paper';
 import { HeaderComponent } from '@components/HeaderComponent';
 import { PlayerFormComponent } from '@components/PlayerFormComponent';
 import { PlayerDataComponent } from '@components/PlayerDataComponent';
